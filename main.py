@@ -29,8 +29,8 @@ if (selected == 'hitung luas segitiga') :
   hitung = st.button ("hitung luas")
 
   if hitung :
-    luas = 0,5 * alas * tinggi
-    st.write ("luas segitiga adalah =", luas)
+    luas = 0.5 * alas * tinggi
+    st.write ("luas segitiga adalah = ", luas)
     st.success (f"luas segitiga adalah = {luas}")
 
 
