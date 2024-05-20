@@ -5,7 +5,8 @@ from streamlit_option_menu import option_menu
 with st.sidebar :
   selected = option_menu ('Hitung Luas Bangun made by zio', 
   ['hitung luas persegi panjang',
-   'hitung luas segitiga'],                        
+   'hitung luas segitiga',
+   'hitung rizzmu'],                       
   default_index=0)
 
 #halaman hitung luas persegi panjang
@@ -24,13 +25,27 @@ if (selected == 'hitung luas persegi panjang') :
 if (selected == 'hitung luas segitiga') :
   st.title('hitung luas segitiga')
 
-  alas = st.slider ("masukan nilai alas", 0, 1000)
-  tinggi = st.slider ("masukan tinggi", 0, 1000)
+  alas = st.number_input ("masukan nilai alas")
+  tinggi = st.number_input ("masukan tinggi", 0)
   hitung = st.button ("hitung luas")
 
   if hitung :
     luas = 0.5 * alas * tinggi
     st.write ("luas segitiga adalah = ", luas)
     st.success (f"luas segitiga adalah = {luas}")
+
+if (selected == 'hitung rizzmu') :
+  st.title('hitung luas rizz')
+
+  jawline = st.number_input ("masukan nilai jawlinemu")
+  handsome = st.number_input ("masukan nilai handsome")
+  bodystructure = st.number_input ("masukan bodystructure")
+  strong = st.number_input ("masukan berapa berat badanmu")
+  hitung = st.button ("hitung rizz")
+
+  if hitung :
+    rizz = jawline * handsome - bodystructure + strong
+    st.write ("rizzmu adalah = ", rizz)
+    st.success (f"rizzmu adalah = {rizz}")
 
 
